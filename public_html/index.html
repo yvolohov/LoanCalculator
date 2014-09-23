@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Кредитный калькулятор</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/loanCalculator.css" rel="stylesheet" type="text/css"/>
+        <link href="css/calendar.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/loanCalculator.js"></script>
+        <script type="text/javascript" src="js/calendar.js"></script>
+    </head>
+    <body>
+        <form action="">
+            <table>
+                <tr class="lc_even_row">
+                    <th colspan="2">Параметры кредита</th>
+                </tr>                
+                <tr class="lc_odd_row">
+                    <td class="lc_form_cell_left">
+                        Сумма кредита:
+                    </td>
+                    <td class="lc_form_cell_right">
+                        <input type="text" id="lc_sum"/>
+                    </td>
+                </tr>
+                <tr class="lc_even_row">
+                    <td class="lc_form_cell_left">
+                        Дата получения кредита:
+                    </td>
+                    <td class="lc_form_cell_right">
+                        <div style="display: inline-block;">
+                            <input type="text" id="lc_get_date"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="lc_odd_row">
+                    <td class="lc_form_cell_left">
+                        На срок (месяцев):
+                    </td>
+                    <td class="lc_form_cell_right">
+                        <input type="text" id="lc_term"/>
+                    </td>
+                </tr>
+                <tr class="lc_even_row">
+                    <td class="lc_form_cell_left">
+                        Процентная ставка (%):
+                    </td>
+                    <td class="lc_form_cell_right">
+                        <input type="text" id="lc_percent"/>
+                    </td>
+                </tr>
+                <tr class="lc_odd_row">
+                    <td class="lc_form_cell_left">
+                        Метод возврата:
+                    </td>
+                    <td class="lc_form_cell_right">
+                        <select id="lc_pay_system" 
+                                onchange="yvLoanCalculator.enableElements();">
+                            <option value="1">Ежемесячные взносы</option>
+                            <option value="2">Весь кредит в конце срока</option>
+                        </select>
+                    </td>
+                </tr>                
+                <tr class="lc_even_row">
+                    <td class="lc_form_cell_left">
+                        День выплат по кредиту:
+                    </td>
+                    <td class="lc_form_cell_right">
+                        <select id="lc_pay_day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>                            
+                        </select>
+                    </td>
+                </tr>
+                <tr class="lc_odd_row">
+                    <td colspan="2">
+                        <input type="button" value="Посчитать" 
+                               onclick="yvLoanCalculator.calculate();">
+                    </td>
+                </tr>    
+            </table>
+        </form>
+        <br/>
+        <div id="lc_table_view">
+            <!-- place for results -->
+        </div>
+        <script type="text/javascript">
+            yvLoanCalculator.initBeginValues();
+            var yvc1 = new yvCalendar(document.getElementById("lc_get_date"));
+        </script>    
+    </body>
+</html>

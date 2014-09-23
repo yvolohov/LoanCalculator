@@ -1,0 +1,53 @@
+.yvc_table
+{
+    border-spacing: 1px;
+    background-color: #CCCCCC;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    cursor: default;
+    position: absolute;
+    z-index: 1;
+}
+.yvc_table *
+{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+.yvc_inactive_day, .yvc_weekend_day, .yvc_working_day, 
+.yvc_first_header, .yvc_second_header, .yvc_footer 
+{
+    width: 20px;
+    height: 20px;    
+    text-align: center;
+}
+.yvc_inactive_day
+{   
+    color: #CCCCCC;
+    background-color: #FFFFFF;
+}
+.yvc_working_day
+{
+    color: #0000FF;
+    background-color: #FFFFFF;
+}
+.yvc_weekend_day
+{   
+    color: #FF0000;
+    background-color: #FFFFFF;
+}
+.yvc_first_header:hover, .yvc_inactive_day:hover, .yvc_working_day:hover, 
+.yvc_weekend_day:hover, .yvc_footer:hover
+{
+    background-color: #EEEEEE;
+}
+.yvc_first_header, .yvc_second_header, .yvc_footer
+{
+    color: #555555;
+    font-weight: bold;
+    background-color: #DDDDDD;
+    border: solid 1px #DDDDDD;
+}
+.yvc_inactive_day, .yvc_working_day, .yvc_weekend_day
+{
+    border: solid 1px #FFFFFF;    
+}

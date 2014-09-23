@@ -1,0 +1,54 @@
+* 
+{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.lc_form_cell_left
+{
+    width: 200px;
+}
+.lc_form_cell_right
+{
+    width: 200px
+}
+.lc_even_row
+{
+    background-color: #DCDCDC;
+}
+.lc_odd_row
+{
+    background-color: #ECECEC;    
+}
+.lc_header_cell
+{
+    text-align: center;
+}
+.lc_short_num_cell 
+{
+    width: 50px;
+    text-align: right;
+}
+.lc_long_num_cell 
+{
+    width: 75px;
+    text-align: right;
+}
+.lc_date_cell 
+{
+    width: 100px;
+    text-align: center;
+}
+.lc_footer_cell
+{
+    text-align: right;
+}
+#lc_sum, #lc_term, #lc_percent 
+{
+    text-align: right;
+}
+table, tr, td, th
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+}
